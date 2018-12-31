@@ -116,7 +116,8 @@ int main(int argc, char ** argv)
 		masterVec.clear();
 
 		//! Receive sin vector from slaves
-		for (int i = 1; i < worldSize; i++) {
+		for (int i = 1; i < worldSize; i++)
+		{
 			//! Receive number of angles to help resize temp vector
 			MPI_Recv(&numAngles, 1, MPI_INT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
