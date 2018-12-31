@@ -36,9 +36,9 @@
 #define MASTER 0
 
 template< typename T >
-T randomizer(const T& i_low, const T& i_high)
+T randomizer(const T& low, const T& high)
 {
-	return (static_cast<T> (rand()) / static_cast<T> (RAND_MAX / (i_high - i_low)) + i_low);
+	return (static_cast<T> (rand()) / static_cast<T> (RAND_MAX / (high - low)) + low);
 }
 
 int main(int argc, char ** argv)
